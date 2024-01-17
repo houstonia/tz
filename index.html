@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Task</title>
+</head>
+
+<body>
+  <div class="collage"></div>
+  <div class="modal">
+    <img src="" alt="modal's pic">
+    <div class="btns">
+      <button class="close-btn">X</button>
+      <button>
+        <a href="#" class="download-btn" download>Скачать</a>
+      </button>
+    </div>
+  </div>
+  <div class="user-table">
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable('id')">ID</th>
+          <th onclick="sortTable('username')">Username <i class="fa-solid fa-arrow-down-a-z"></i></th>
+          <th onclick="sortTable('email')">Email <i class="fa-solid fa-arrow-down-a-z"></i></th>
+          <th onclick="sortTable('fullName')">Full Name <i class="fa-solid fa-arrow-down-a-z"></i></th>
+          <th onclick="sortTable('birthDate')">Birth Date <i class="fa-solid fa-arrow-down-1-9"></i></th>
+          <th onclick="sortTable('height')">Height <i class="fa-solid fa-arrow-down-1-9"></i></th>
+          <th onclick="sortTable('ip')">IP Address <i class="fa-solid fa-arrow-down-1-9"></i></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Здесь будут появляться данные о пользователях -->
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button onclick="prevPage()" class="prev-btn">
+        <i class="fa-solid fa-angles-left"></i>
+      </button>
+      <p class="page-number" >1</p>
+      <button onclick="nextPage()" class="next-btn">
+        <i class="fa-solid fa-angles-right"></i>
+      </button>
+    </div>
+    <div id="sidePanel" class="sidePanel">
+      <button onclick="closeSidePanel()">X</button>
+    </div>
+
+  </div>
+  <script src="./task1.js"></script>
+  <script src="./task2.js"></script>
+  <!-- для иконок -->
+  <script src="https://kit.fontawesome.com/2b85ead433.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
