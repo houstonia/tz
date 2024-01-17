@@ -129,13 +129,13 @@ function ipToNumber(ip) {
 // по определённому критерию
 const usersInfo = {
     'id': function () { return pages[currentPage]?.sort((a, b) => a.id - b.id) },
-    'username': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => a.username.localeCompare(b.username)) },
-    'email': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => a.email.localeCompare(b.email)) },
-    'fullName': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => a.lastName.localeCompare(b.lastName)) },
-    'birthDate': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => new Date(a.birthDate) - new Date(b.birthDate)) },
-    'height': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => a.height - b.height) },
-    'ip': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => ipToNumber(a.ip) - ipToNumber(b.ip)) },
-    'email': function () { return pages[currentPage] = pages[currentPage]?.sort((a, b) => a.email.localeCompare(b.email)) },
+    'username': function () { return pages[currentPage]?.sort((a, b) => a.username.localeCompare(b.username)) },
+    'email': function () { return pages[currentPage]?.sort((a, b) => a.email.localeCompare(b.email)) },
+    'fullName': function () { return pages[currentPage]?.sort((a, b) => a.lastName.localeCompare(b.lastName)) },
+    'birthDate': function () { return pages[currentPage]?.sort((a, b) => new Date(a.birthDate) - new Date(b.birthDate)) },
+    'height': function () { return pages[currentPage]?.sort((a, b) => a.height - b.height) },
+    'ip': function () { return pages[currentPage]?.sort((a, b) => ipToNumber(a.ip) - ipToNumber(b.ip)) },
+    'email': function () { return pages[currentPage]?.sort((a, b) => a.email.localeCompare(b.email)) },
 }
 //сортирует и передает  результат в фунцию отображения данных в таблице
 const sortTable = (field) => displayUsersData(usersInfo[field]());
